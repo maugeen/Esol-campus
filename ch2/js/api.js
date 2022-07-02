@@ -1,29 +1,35 @@
 const url1 = "https://jsonplaceholder.typicode.com/users"
 const url2 = "https://jsonplaceholder.typicode.com/users/1/albums"
 
-/* Usando promesas */
-const promiseWay = async() => {
-    return fetch(url1)
+// Se definen 2 formas de obtener los datos de la URL solicitada
+
+
+// **Usando promesas** 
+const promiseWay = async(url) => {
+    return fetch(url)
     .then(response => response.json())
-    .then(data => console.log(data.response));
+    .then(data => data);
 }
 
-/* Con async await */
-const asyncWay = async() => {
+// **Con async await**
+const asyncWay = async(url) => {
     try{
-        const response = await fetch(url1);
+        const response = await fetch(url);
         const data = await response.json();
-        return data;
+        return data
     } catch (error) {
         console.log(error);    
-}console.log(response);
 }
-// console.log(response);
-// console.log(promiseWay());
+}
 
-const getUser = async (users) => {
-  var data = await users
-    const arrayFinal = () => {
+// Función para la obtención del array de usuarios con los datos solicitados.
+
+const getUser = async (users) => { 
+  var data = await users(url1)
+  console.log(arrayFinal(data))
+}
+
+const arrayFinal = (data) => {
         const array = []
             for (let i = 0; i < data.length; i++) {
                 const { id, name, username, email, address: { street, suite, city, geo: { lng } }, website, company } = data[i]
@@ -47,34 +53,28 @@ const getUser = async (users) => {
                 array.push(dataFiltered)
             }
          return array
-    }
-    console.log(data)
+        
 }
 
-//console.log(getUser()) 
-//console.log(getUser(promiseWay))
-//console.log(getUser(asyncWay))
+//Impresión por consola con ambos métodos
+getUser(promiseWay);
+getUser(asyncWay);
 
 
+// Función para la obtención del array de usuarios con los datos solicitados.
+const getAlbums = async (...parameter) => {
+    let [id, al] = parameter
+    var data = await al(url2)
+    let albums = [...data];
+    let albumFiltered = filterId(id, albums)
+    console.log(albumFiltered);
+}
 
+let filterId = (...music) => {
+    let [id, albums] = music
+    return albums.filter(list => list.id === id);
+}
 
-
-// const getUserByID = (id) => {
-        //     return data.find((data) => data.id === id)
-        // }
-        // console.log(getUserByID(2))
-
-
-
-
-//console.log(getUser())
-
-
-
-// function deleteProps(array) {
-//     arrayFinal.map((date) => {
-//         const { phone, ...rest} = date
-//         users = rest
-//     })
-// }
-// console.log(deleteProps(arrayFinal));
+//Impresión por consola con ambos métodos (ejemplo)
+ getAlbums(2,promiseWay);
+ getAlbums(3,asyncWay);  
