@@ -1,17 +1,27 @@
 {
   "name": "usuarios",
   "version": "1.0.0",
-  "description": "Usuarios del servicio de transporte de la ciudad de Springfield",
+  "description": "Usuarios de transporte de la ciudad de Springfield",
   "main": "users.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maugeen/Esol-campus.git"
+  },
   "keywords": [
+    "users",
     "id",
-    "name",
     "transport",
+    "passengers",
+    "name",
     "bus"
   ],
   "author": "Maria Eugenia Romero",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maugeen/Esol-campus/issues"
+  },
+  "homepage": "https://github.com/maugeen/Esol-campus#readme"
 }
