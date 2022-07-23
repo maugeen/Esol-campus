@@ -1,0 +1,6 @@
+Hola Marcelo:
+Agrego algunas aclaraciones: 
+    /* NO PUDE CONSEGUIR QUE RENDERICE EL RESULTADO DE LA CANCELACIÓN, BORRA ITEMS DE LA LISTA CUANDO SE REALIZA OTRA COMPRA */
+    /* NO PUDE LOGRAR ASOCIAR EL BOTÓN DE CANCELAR A UN ITEM DEFINIDO Y QUE ASI ENVÍE EL MAIL */,
+Si es posible, en la semana me gustaría si me podés ayudar a resolver estos problemas.
+Muchas gracias.
