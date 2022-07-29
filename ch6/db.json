@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Mi primera historia",
+      "content": "Esta es la primera historia de mi vida..."
+    },
+    {
+      "title": "Hola",
+      "content": "No se que escribir",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "name": "Homero Simpson",
+      "email": "hsimpson@mail.com",
+      "password": "1234"
+    }
+  ]
+}
