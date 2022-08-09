@@ -1,0 +1,41 @@
+.product-list {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 30px;
+  color: #000000;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: flex;
+  margin-top: 20px;
+}
+
+
+
+.product-list a {
+  margin-top: 30px;
+  font-size: 25px;
+  color: #000000;
+   
+}
+
+.product-list h2 {
+  font-size: 40px;
+}
+
+.product-list h3 {
+  margin-top: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
+  color: #000000;
+}
+
+.card {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  }
+

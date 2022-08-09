@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem;">
+    <img src="../../assets/{{product?.image}}" class="card-img-top" alt="{{product?.image}}">
+    <div class="card-body" *ngIf="product">
+        <h3 class="card-title">{{product.name}}</h3>
+        <h4>{{product.price | currency}}</h4>
+        <p class="card-text">{{product.description}}</p>
+        <button 
+        type="button" 
+        class="btn btn-primary"
+        (click)="addToCart(product)"
+        >
+            Comprar 
+        </button>
+        <a [routerLink]="['/']">Volver</a>
+    </div>
+
+</div>

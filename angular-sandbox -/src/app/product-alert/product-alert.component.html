@@ -1,0 +1,8 @@
+<div  *ngIf="product && product.price > 800" >
+    <button type="button" 
+            class="btn btn-success" 
+            (click)="notify.emit()"
+    >
+    Notificarme
+    </button>
+</div>
